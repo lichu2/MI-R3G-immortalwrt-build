@@ -83,3 +83,6 @@ curl -sfL -o /tmp/upx-4.2.4-amd64_linux.tar.xz "https://github.com/upx/upx/relea
 xz -d -c /tmp/upx-4.2.4-amd64_linux.tar.xz | tar -x -C "/tmp"
 /tmp/upx-4.2.4-amd64_linux/upx --ultra-brute /tmp/AdGuardHome/AdGuardHome > /dev/null 2>&1
 mv /tmp/AdGuardHome/AdGuardHome ./ && rm -rf /tmp/AdGuardHome
+
+# 拉取lucky插件源码
+[ -d "package/lucky" ] || git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
